@@ -1,5 +1,4 @@
 
-
 # -*- coding: utf-8 -*-
 """
 Created on Sun Jan 28 11:58:42 2024
@@ -122,16 +121,13 @@ for file_counter, file_num in enumerate(rnd.all_pfs):
     df_step3.insert(0, 'RIVID', data_WID['RIVID'])
 
     df_step3.to_csv(f'E:/precep_processed_1105/step3_{file_num}.csv', index=False)
-
     print(f"Step 3 completed for file {file_num}")
 
-# Rest of your code...
     del results, data_precep_concat
     time_after_first = time.perf_counter()    
     print(f"time taken after step 3: {time_after_first - start_time:.6f} seconds")
 
     ################################################## Step 4 (R code integration)
-    del results, data_precep_concat
     # Run the R code
     robjects.r(rnd.get_step4_code())
 
