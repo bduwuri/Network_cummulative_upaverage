@@ -1,4 +1,4 @@
-**HydroGraphNet - Network Cumulative Upstream Average**\
+**HydroGraphNet**\
 \
 Calculates cumulative area-weighted averages of spatial variables across river networks using custom Python implementations.
 
